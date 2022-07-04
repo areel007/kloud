@@ -1,15 +1,15 @@
 <template>
-    <div class="w-full h-200 relative">
+    <div class="w-full h-200 relative mb-2">
         <Carousel class="w-full h-full relative">
             <Slide v-for="(slide, index) in slideColors" :key="index">
                 <div
                     v-show="currentSlide === index + 1"
                     :class="`w-full h-full absolute top-0 left-0 flex flex-col justify-center items-center gap-5 ${slide.bg}`"
                 >
-                    <span class="text-18 md:text-24 font-bold text-white text-center"
+                    <span class="text-18 md:text-48 font-semibold text-white text-center"
                         >KLOUD COMMERCE CHALLENGE</span
                     >
-                    <span class="text-white text-16 md:text-20">{{ slide.details }}</span>
+                    <span class="text-white text-18 md:text-25">{{ slide.details }}</span>
                     <div class="flex gap-2 items-center">
                         <div
                             v-for="(slideCount, index) in getSlideCount"
@@ -36,11 +36,11 @@ const slideColors = reactive([
         details: 'Have fun',
     },
     {
-        bg: 'bg-red-500',
+        bg: 'bg-primary',
         details: 'Create',
     },
     {
-        bg: 'bg-yellow-500',
+        bg: 'bg-primary',
         details: 'Explore',
     },
 ])
